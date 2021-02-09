@@ -2,7 +2,7 @@
 {% load staticfiles %}
 <title>
 {% block title_block %}
-    Add a Page
+    Add a Category
 {% endblock %}
 </title>
 
@@ -13,7 +13,7 @@
 
 
         <div>
-            <form id="category_form" method="post" action="{% url rango:add_category %}">
+            <form id="category_form" method="post" action="{% url 'rango:add_category'  %}">
                 {% csrf_token %}
                 {% for hidden in form.hidden_fields %}
                     {{ hidden }}
