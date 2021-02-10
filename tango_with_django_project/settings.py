@@ -56,6 +56,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+
 ]
 
 ROOT_URLCONF = 'tango_with_django_project.urls'
@@ -140,3 +141,7 @@ MEDIA_URL = '/media/'
 
 
 LOGIN_URL = 'rango:login'
+
+SESSION_EXPIRE_AT_BROWSER_CLOSE = False
+# SESSION_COOKIE_AGE
+#^ used when expire at browser close is false (ie persistent session), can specify how long session lasts for (in seconds)
